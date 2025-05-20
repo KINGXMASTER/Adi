@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wireframe Example</title>
+ 
+ 
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'UnifrakturCook', serif;
+    transition: all 0.3s ease-in-out;
+  }
+
+  body {
+    display: grid;
+    grid-template-areas:
+      "nav nav"
+      "header header"
+      "main aside"
+      "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+    gap: 15px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    color: #f8f8f8;
+  }
+      main {
+      height: 400px;           
+      overflow-y: auto;       
+      border: 2px solid #444;  
+      padding: 10px;
+      background: #f5f5f5;
+    }
+
+  nav {
+    grid-area: nav;
+    background: #111;
+    padding: 20px;
+    border-bottom: 2px solid crimson;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    justify-content: center;
+  }
+
+  nav li {
+    color: crimson;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+  }
+
+  nav li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: crimson;
+    transition: width 0.3s;
+    margin-top: 5px;
+  }
+
+  nav li:hover::after {
+    width: 100%;
+  }
+
+  header {
+    grid-area: header;
+    background: #1a1a1a;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 2px solid crimson;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    color: crimson;
+    animation: fadeInDown 1s ease-out;
+  }
+
+  header p {
+    color: #ccc;
+    font-style: italic;
+    animation: fadeInUp 1s ease-out;
+  }
+
+  main {
+    grid-area: main;
+    background: #121212;
+    padding: 20px;
+    overflow-y: auto;
+    border: 2px solid crimson;
+    box-shadow: 0 0 10px crimson;
+  }
+
+  aside {
+    grid-area: aside;
+    background: #1f1f1f;
+    padding: 20px;
+    border-left: 2px solid crimson;
+  }
+
+  footer {
+    grid-area: footer;
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid crimson;
+    color: #aaa;
+  }
+
+  section {
+    margin-bottom: 20px;
+    border-left: 5px solid crimson;
+    background: #1a1a1a;
+    padding: 15px;
+    animation: fadeIn 0.5s ease;
+  }
+
+  section:hover {
+    background: #222;
+    transform: scale(1.01);
+  }
+
+  h2 {
+    color: #f44;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    color: gold;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #ccc;
+    line-height: 1.6;
+  }
+
+  aside ul {
+    list-style: square;
+    color: #bbb;
+    padding-left: 20px;
+  }
+
+  aside li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>Images</li>
+      <li>Editon</li>
+      <li>Manga</li> 
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Berserk</h1>
+    <p>Dark, Brutal, Emotional, Legendary</p>
+  </header>
+
+  <!-- Main Content -->
+  <main> 
+    <h3> Characters </h3>
+    <section>
+      <h2>Guts</h2>
+      <p>The central protagonist, known as the "Black Swordsman." Born from a hanged corpse and raised by mercenaries, Guts wields the massive Dragonslayer sword and seeks vengeance against Griffith for the betrayal of the Band of the Hawk.</p>
+    </section>
+    <section>
+      <h2>Griffith</h2>
+      <p>Charismatic leader of the Band of the Hawk with dreams of ruling his own kingdom. After a tragic downfall, he sacrifices his comrades to become Femto, a member of the God Hand, embodying ambition and betrayal. </p> 
+    
+    </section>   
+    <section> 
+      <h2>Casca</h2> 
+      <p> The sole female member of the original Band of the Hawk. A formidable warrior and Guts' love interest, Casca suffers immense trauma during the Eclipse, leading to a childlike mental state. </p> 
+    </section>  
+    <section> 
+      <h2> Skull Night</h2> 
+      <p>A mysterious armored figure who opposes the God Hand. Offers cryptic guidance to Guts and wields a sword capable of cutting through dimensions. </p> 
+    </section> 
+    <section> 
+      <h2>Luca</h2> 
+      <p> A compassionate prostitute who protects Casca during the events in Albion. Demonstrates courage and kindness amidst chaos.</p>
+    </section> 
+    <section>
+      <h2>Flora</h2> 
+      <p>An elderly witch and Schierke's mentor. Provides magical assistance to Guts' group before her demise.</p> 
+    </section> 
+    <section> 
+      <h2>Zodd the immortal </h2> 
+      <p>Zodd is a towering, demonic warrior who has lived for over 300 years, earning the nickname "The Immortal" due to his undefeated record in battle—until he meets Guts. He thrives on combat, relentlessly seeking worthy opponents, and respects only those with great strength.</p>
+    </section>
+  </main>
+
+  <!-- Sidebar -->
+  <aside>
+    <h3>Description</h3> 
+    <ul>
+      <li>Berserk is a dark fantasy anime that follows Guts, a lone mercenary with a tragic past, as he battles demons, destiny, and his own inner rage. Set in a brutal medieval world, the story explores themes of pain, sacrifice, and revenge. With intense action and deep psychological conflict, it delves into the darkest corners of the human soul.</li>  
+      <li>Berserk originated as a manga series created by Kentaro Miura. It first appeared as a one-shot prototype in 1988, and the full serialization began in 1990 in Monthly Animal House, which later became Young Animal magazine.</li> 
+    </ul>
+  </aside> 
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Berserk 1997 </p> 
+  </footer>
+
+</body>
+</html>
